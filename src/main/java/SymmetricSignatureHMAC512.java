@@ -15,7 +15,7 @@ public class SymmetricSignatureHMAC512 {
     private static String clientSecret = "4dd863e5-53a8-4c15-bfe3-11902d48fa43";
 
     public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeyException, JsonProcessingException {
-//        <HTTP METHOD> + ”:” + <RELATIVE PATH URL> + “:“ + LowerCase(HexEncode(SHA-256(Minify(<HTTP BODY>)))) + “:“ + <X-TIMESTAMP>
+//        <HTTP METHOD> + ”:” + <RELATIVE PATH URL> + “:“ <ACCESS TOKEN> + “:“ + LowerCase(HexEncode(SHA-256(Minify(<HTTP BODY>)))) + “:“ + <X-TIMESTAMP>
         String httpMethod = "POST";
         String endpointUrl = "/some-service/snap/v1.0/balance-inquiry";
         String accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
